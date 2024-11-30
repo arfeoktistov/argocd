@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name     : myapp2
+  name     : myapp1
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name     : in-cluster
-    namespace: app2
+    namespace: app1
   source:
-    path   : "HelmCharts/MyChart2"
+    path   : "HelmCharts/MyChart1"
     repoURL: "git@github.com:arfeoktistov/argocd.git"
     targetRevision: HEAD
     helm:
