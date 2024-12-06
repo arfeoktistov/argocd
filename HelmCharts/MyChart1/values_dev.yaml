@@ -1,7 +1,7 @@
 # Dev Override Values for my Helm Chart
 
 container:
-  image: nginx
+  image: temson13/temson13
 
 replicaCount: 4
 
