@@ -18,7 +18,7 @@ spec:
       - values_dev.yaml
       parameters:
       - name: "container.image"
-        value: temson13/k8php
+        value: nginx
 
   project: default
   syncPolicy:
