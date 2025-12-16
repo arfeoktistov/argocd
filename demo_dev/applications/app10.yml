@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name     : myapp4
+  name     : myapp10
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name     : in-cluster
-    namespace: app4
+    namespace: app10
   source:
     path   : "HelmCharts/MyChart2"
     repoURL: "git@github.com:arfeoktistov/argocd.git"
@@ -18,7 +18,7 @@ spec:
       - values_dev.yaml
       parameters:
       - name: "container.image"
-        value: temson13/temson13
+        value: temson13/k8php
 
   project: default
   syncPolicy:
